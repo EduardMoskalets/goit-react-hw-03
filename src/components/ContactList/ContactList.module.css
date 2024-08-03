@@ -3,4 +3,5 @@
     gap: 16px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    list-style-type: none;
 }

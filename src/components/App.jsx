@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import initialContacts from '../contacts.json';
 import ContactList from './ContactList/ContactList';
-import './App.module.css';
+import css from './App.module.css';
 import SearchBox from './SearchBox/SearchBox';
 import ContactForm from './ContactForm/ContactForm';
 
@@ -20,11 +20,11 @@ export default function App() {
     });
   };
 
-  const deleteContact = (contactId) => { 
-    setContacts((prevContacts) => { 
+  const deleteContact = (contactId) => {
+    setContacts((prevContacts) => {
       return prevContacts.filter((contact) => contact.id !== contactId)
     })
-  }
+  };
 
   const visibleContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(search.toLowerCase())
